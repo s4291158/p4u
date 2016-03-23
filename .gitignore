@@ -2,3 +2,4 @@ p4u/settings.py
 *.pyc
 db.sqlite3
 .idea/
+p/templates/tracking.html
