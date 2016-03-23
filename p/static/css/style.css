@@ -16,32 +16,22 @@
   .navbar .navbar-right a {
     color: darkorange !important; }
 
-section {
-  height: 100vh;
+section.banner {
+  height: 150px;
+  background: #14DBFE; }
+  section.banner .container-fluid img {
+    height: 70%; }
+section.intro {
+  height: 600px;
+  color: white; }
+  section.intro .left {
+    background: lightgoldenrodyellow;
+    height: 100%; }
+  section.intro .right {
+    height: 100%;
+    background: lightpink; }
+section.map {
   padding-top: 80px; }
-  section.intro {
-    padding-top: 0;
-    color: white;
-    background: linear-gradient(to top, transparent, black), url("../img/cars.JPG") no-repeat 50% top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    section.intro .text-block {
-      position: relative;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-      transform: translateY(-50%); }
-      section.intro .text-block h3 {
-        margin-bottom: 20px; }
-      section.intro .text-block form input {
-        height: 50px; }
-      section.intro .text-block form button {
-        height: 50px;
-        background: darkorange; }
-      .btn section.intro .text-block .row:hover {
-        background: orange; }
   section.map #map-container {
     height: 100%;
     width: 100%; }
@@ -58,6 +48,13 @@ section {
 
 .no-border {
   border-width: 0; }
+
+.vertical-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .icon-labels {
   color: black;
