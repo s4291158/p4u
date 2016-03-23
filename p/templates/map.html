@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block body-class %}
+    class="map-page"
+{% endblock %}
+
+{% block content %}
+
+    <section class="map">
+        <div id="map-container"></div>
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map-container'), {
+                    center: {
+                        lat: {{ center.latitude }},
+                        lng: {{ center.longitude }}
+                    },
+                    zoom: 15
+                });
+
+                var green_pin = {
+                    url: '{% static "img/pin1.png" %}'
+                };
+
+                var blue_pin = {
+                    url: '{% static "img/pin2.png" %}'
+                };
+
+                var gray_pin = {
+                    url: '{% static "img/pin3.png" %}'
+                };
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: 'holding...'
+                });
+
+                {% for carpark in carparks %}
+
+                    var marker{{ carpark.id }} = new google.maps.Marker({
+                        position: {
+                            lat: {{ carpark.address.position.latitude }},
+                            lng: {{ carpark.address.position.longitude }}
+                        },
+                        map: map,
+                        icon:
+                                {% if carpark.available %}
+                                    blue_pin,
+                                {% else %}
+                                    gray_pin,
+                                {% endif %}
+                        animation: google.maps.Animation.DROP,
+                        title: '${{ carpark.price|floatformat:2 }}'
+                    });
+
+                    marker{{ carpark.id }}.addListener('click', function () {
+                        infowindow.setContent('{{ carpark.address.formatted }}');
+                        infowindow.open(map, marker{{ carpark.id }});
+                    });
+
+                {% endfor %}
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_FqNJa1QL9qjW2c0cLnhAdcgDJAaci2U&callback=initMap"
+                async defer></script>
+    </section>
+
+{% endblock %}
