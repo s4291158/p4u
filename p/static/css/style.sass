@@ -40,12 +40,46 @@ section
     color: white
 
     .left
-      background: lightgoldenrodyellow
+      background-image: url('../img/left.png')
+      background-size: cover
       height: 100%
 
     .right
       height: 100%
-      background: lightpink
+      background-image: url('../img/right.png')
+      background-size: cover
+
+    .container-fluid
+      max-width: 80%
+      span
+        font-size: 70px
+
+  &.why
+    height: 400px
+
+    .container-fluid
+      max-width: 70%
+
+      .line1
+        margin-bottom: 20px
+        h1
+          font-size: 40px
+          font-weight: 600
+
+      .line2
+        margin-bottom: 20px
+
+  &.how
+    height: 600px
+    background: #09E0FF
+
+    .line1
+
+    .line2
+      height: 350px
+
+    img
+      max-width: 70%
 
   &.map
     padding-top: 80px
@@ -82,3 +116,12 @@ section
   width: 70px
   white-space: nowrap
 
+.font-js
+  font-family: Josefin Sans
+  font-style: normal
+  font-variant: normal
+  font-size: 18px
+  font-weight: 500
+
+.font-m
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif
