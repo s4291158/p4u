@@ -70,16 +70,36 @@ section
         margin-bottom: 20px
 
   &.how
-    height: 600px
+    height: 700px
     background: #09E0FF
 
     .line1
 
     .line2
-      height: 350px
+      height: 280px
+      margin-bottom: 20px
+      max-width: 80%
 
-    img
-      max-width: 70%
+      [class*='col-']
+        height: 100%
+        position: relative
+
+        img
+          width: 70%
+          max-height: 80%
+          position: absolute
+          bottom: 0
+          left: 15%
+
+    .line3
+      max-width: 80%
+      margin-bottom: 30px
+      span
+        font-weight: 600
+
+    .line4
+      span
+        font-size: 24px
 
   &.map
     padding-top: 80px

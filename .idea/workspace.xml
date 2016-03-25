@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df84ed6d-4017-407d-9ab0-0a8f4b8086ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/icon1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/icon2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/icon3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/icon4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/icon5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/left.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/right.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/p/static/img/why-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/p4u.iml" afterPath="$PROJECT_DIR$/.idea/p4u.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p/static/css/style.css" afterPath="$PROJECT_DIR$/p/static/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p/static/css/style.css.map" afterPath="$PROJECT_DIR$/p/static/css/style.css.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p/static/css/style.sass" afterPath="$PROJECT_DIR$/p/static/css/style.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p/templates/css.html" afterPath="$PROJECT_DIR$/p/templates/css.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/p/templates/index.html" afterPath="$PROJECT_DIR$/p/templates/index.html" />
     </list>
     <ignored path="p4u.iws" />
@@ -45,8 +33,8 @@
             <file leaf-file-name="style.sass" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/p/static/css/style.sass">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.21104972">
-                    <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+                  <state vertical-scroll-proportion="0.1922652">
+                    <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
                     <folding />
                   </state>
                 </provider>
@@ -66,8 +54,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/p/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4370861">
-              <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.8592715">
+              <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -141,7 +129,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1913" />
-    <option name="width" value="1335" />
+    <option name="width" value="1267" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -590,10 +578,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="0" width="1335" height="1047" extended-state="0" />
+    <frame x="1913" y="0" width="1267" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1772549" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18724109" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694477" sideWeight="0.50321543" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -601,7 +589,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28008753" sideWeight="0.49571276" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.49678457" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32603937" sideWeight="0.49678457" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1025,16 +1013,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/p/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4370861">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.8592715">
+          <caret line="110" column="14" selection-start-line="110" selection-start-column="14" selection-end-line="110" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p/static/css/style.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21104972">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="16" selection-end-line="78" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.1922652">
+          <caret line="72" column="13" selection-start-line="72" selection-start-column="13" selection-end-line="72" selection-end-column="13" />
           <folding />
         </state>
       </provider>

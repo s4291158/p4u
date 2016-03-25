@@ -48,12 +48,28 @@ section.why {
     section.why .container-fluid .line2 {
       margin-bottom: 20px; }
 section.how {
-  height: 600px;
+  height: 700px;
   background: #09E0FF; }
   section.how .line2 {
-    height: 350px; }
-  section.how img {
-    max-width: 70%; }
+    height: 280px;
+    margin-bottom: 20px;
+    max-width: 80%; }
+    section.how .line2 [class*='col-'] {
+      height: 100%;
+      position: relative; }
+      section.how .line2 [class*='col-'] img {
+        width: 70%;
+        max-height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 15%; }
+  section.how .line3 {
+    max-width: 80%;
+    margin-bottom: 30px; }
+    section.how .line3 span {
+      font-weight: 600; }
+  section.how .line4 span {
+    font-size: 24px; }
 section.map {
   padding-top: 80px; }
   section.map #map-container {
