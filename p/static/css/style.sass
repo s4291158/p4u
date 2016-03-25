@@ -1,3 +1,7 @@
+$xxs: "(max-width: 480px)"
+$xs: "(max-width: 767px)"
+$sm: "(max-width: 991px)"
+$md: "(max-width: 1199px)"
 
 .navbar
   margin-bottom: 0
@@ -13,7 +17,6 @@
     padding-top: 15px
 
   .navbar-brand
-    //margin-left: 15px !important
     font-size: 36px
     font-weight: 600
     color: darkorange
@@ -22,43 +25,70 @@
       color: orange
 
   .navbar-right
-    //margin-right: 15px
     a
       color: darkorange !important
 
 section
-  &.banner
-    height: 150px
+  &#banner
     background: #09E0FF
+    height: 150px
+    @media #{$md}
+      height: 100px
 
     .container-fluid
       img
         height: 70%
+        max-width: 100%
+        max-height: 70%
 
-  &.intro
-    height: 600px
+  &#intro
+
     color: white
 
-    .left
-      background-image: url('../img/left.png')
+    [class*='col-']
       background-size: cover
-      height: 100%
+      height: 600px
+      @media #{$md}
+        height: 300px
 
-    .right
-      height: 100%
-      background-image: url('../img/right.png')
-      background-size: cover
+      &.left
+        background-image: url('../img/left.png')
 
-    .container-fluid
-      max-width: 80%
-      span
-        font-size: 70px
+      &.right
+        background-image: url('../img/right.png')
 
-  &.why
+      .container-fluid
+        max-width: 80%
+        display: block
+
+        a
+          text-decoration: none
+          color: white
+          white-space: pre-line
+          border-width: 5px
+
+          &:hover
+            border: 5px solid #09E0FF
+
+          &:focus
+            outline: none !important
+
+          span
+            font-size: 70px
+            @media #{$md}
+              font-size: 40px
+            @media #{$xxs}
+              font-size: 30px
+
+  &#why
     height: 400px
+    @media #{$xxs}
+      height: 500px
 
     .container-fluid
       max-width: 70%
+      @media #{$sm}
+        max-width: 100%
 
       .line1
         margin-bottom: 20px
@@ -69,43 +99,81 @@ section
       .line2
         margin-bottom: 20px
 
-  &.how
-    height: 700px
+  &#how
+    height: 1200px
     background: #09E0FF
+    @media #{$md}
+      display: none
 
-    .line1
-
-    .line2
-      height: 280px
+    .block1
       margin-bottom: 20px
-      max-width: 80%
 
-      [class*='col-']
-        height: 100%
-        position: relative
-
-        img
-          width: 70%
-          max-height: 80%
-          position: absolute
-          bottom: 0
-          left: 15%
-
-    .line3
-      max-width: 80%
+    .block2, .block3
       margin-bottom: 30px
-      span
-        font-weight: 600
+      .line1
+        height: 220px
+        margin-bottom: 20px
+        max-width: 80%
 
-    .line4
-      span
-        font-size: 24px
+        [class*='col-']
+          height: 100%
+          position: relative
+
+          img
+            width: 70%
+            max-height: 80%
+            position: absolute
+            bottom: 0
+            left: 15%
+
+      .line2
+        max-width: 80%
+        margin-bottom: 30px
+        span
+          font-weight: 600
+
+      .line3
+        span
+          font-size: 24px
+
+  &#landing
+    height: 400px
+    @media #{$xs}
+      height: 500px
+
+    .container-fluid
+      [class*='col-']
+        @media #{$sm}
+          margin: 10px 0 10px
+
+        a
+          width: 200px
+          height: 200px
+          border-radius: 100px
+          border: 10px solid #09E0FF
+          color: #000
+          white-space: pre-wrap
+
+          &:hover
+            text-decoration: none
+            background: lightcyan
+
+          &:focus
+            outline: none !important
+
+          p
+            font-size: 20px
 
   &.map
     padding-top: 80px
     #map-container
       height: 100%
+
       width: 100%
+
+footer
+  height: 60px
+  background: #09E0FF
 
 .no-padding
   margin-right: 0

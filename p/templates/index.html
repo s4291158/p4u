@@ -9,46 +9,31 @@
 {% block nav %}{% endblock %}
 
 {% block content %}
-    <section class="banner container-fluid">
+    <section id="banner" class="container-fluid">
         <div class="container-fluid text-center vertical-center">
             <img src="{% static 'img/logo2.png' %}">
         </div>
     </section>
-    <section class="intro container-fluid">
+    <section id="intro" class="container-fluid">
         <div class="row">
             <div class="col-md-6 left">
                 <div class="container-fluid text-center vertical-center">
-                    <span class="font-m">DO YOU NEED A PARK?</span>
+                    <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                        <span class="font-m">DO YOU NEED A PARK?</span>
+                    </a>
                 </div>
             </div>
 
             <div class="col-md-6 right">
                 <div class="container-fluid text-center vertical-center">
-                    <span class="font-m">DO HAVE SPACE?</span>
+                    <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                        <span class="font-m">DO HAVE SPACE?</span>
+                    </a>
                 </div>
             </div>
-
-            {#            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 text-center">#}
-            {#                <h1>Need a carpark?</h1>#}
-            {#                <h3>Not really</h3>#}
-            {#                <form method="post" action="">#}
-            {#                    {% csrf_token %}#}
-            {#                    <div class="row no-padding">#}
-            {#                        {% include 'form-field.html' with field=form.email class='col-xs-12 col-sm-9' %}#}
-            {#                        <div class="form-group col-xs-12 col-sm-3">#}
-            {#                            <button class="form-control btn btn-primary no-border-radius no-border" type="submit">Sign#}
-            {#                                up#}
-            {#                            </button>#}
-            {#                        </div>#}
-            {#                    </div>#}
-            {#                </form>#}
-            {#                <p>{{ message }}</p>#}
-            {##}
-            {#            </div>#}
-
         </div>
     </section>
-    <section class="why container-fluid">
+    <section id="why" class="container-fluid">
         <div class="container-fluid text-center vertical-center">
             <div class="line1 container-fluid">
                 <h1 class="font-m">why parkr?</h1>
@@ -65,50 +50,135 @@
             </div>
         </div>
     </section>
-    <section class="how container-fluid">
+    <section id="how" class="container-fluid">
         <div class="container-fluid text-center vertical-center">
-            <div class="line1 container-fluid">
+            <div class="block1 container-fluid">
                 <h1 class="font-m">So, how does it work?</h1>
             </div>
-            <div class="line2 container-fluid">
-                <div class="col-md-12 col-lg-2 col-lg-offset-1">
-                    <img src="{% static 'img/icon1.png' %}">
+            <div class="block2 container-fluid">
+                <div class="line1 container-fluid">
+                    <div class="col-md-12 col-lg-2 col-lg-offset-1">
+                        <img src="{% static 'img/icon1.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon2.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon3.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon4.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon5.png' %}">
+                    </div>
                 </div>
-                <div class="col-md-12 col-lg-2">
-                    <img src="{% static 'img/icon2.png' %}">
+                <div class="line2 container-fluid">
+                    <div class="col-md-12 col-lg-2 col-lg-offset-1">
+                        <span class="font-js">Simon is sick of having to look for a park and paying ridiculous rates</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Simon visits parkr and creates an account</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Simon searches for a parking space in the area he needs to park</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Simon books his ideal parking space and pays a greate rate securely online</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Simon is guided by parkr to his parking space</span>
+                    </div>
                 </div>
-                <div class="col-md-12 col-lg-2">
-                    <img src="{% static 'img/icon3.png' %}">
-                </div>
-                <div class="col-md-12 col-lg-2">
-                    <img src="{% static 'img/icon4.png' %}">
-                </div>
-                <div class="col-md-12 col-lg-2">
-                    <img src="{% static 'img/icon5.png' %}">
+                <div class="line3 container-fluid">
+                    <h4 class="font-m"><b>Simon has saved time and money and is stress-free.</b></h4>
+                    <h2 class="font-m">Simon is smart. Be like Simon.</h2>
                 </div>
             </div>
-            <div class="line3 container-fluid">
-                <div class="col-md-12 col-lg-2 col-lg-offset-1">
-                    <span class="font-js">Simon is sick of having to look for a park and paying ridiculous rates</span>
+            <div class="block3 container-fluid">
+                <div class="line1 container-fluid">
+                    <div class="col-md-12 col-lg-2 col-lg-offset-1">
+                        <img src="{% static 'img/icon6.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon7.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon8.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon9.png' %}">
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <img src="{% static 'img/icon10.png' %}">
+                    </div>
                 </div>
-                <div class="col-md-12 col-lg-2">
-                    <span class="font-js">Simon visits parkr and creates an account</span>
+                <div class="line2 container-fluid">
+                    <div class="col-md-12 col-lg-2 col-lg-offset-1">
+                        <span class="font-js">Sarah has space in her garage and driveway that isn't used often</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Sarah visits parkr and creates an account</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Sarah uploads some details of her space and names her price</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Another park member books Sarah's space</span>
+                    </div>
+                    <div class="col-md-12 col-lg-2">
+                        <span class="font-js">Sarah gets paid instantly</span>
+                    </div>
                 </div>
-                <div class="col-md-12 col-lg-2">
-                    <span class="font-js">Simon searches for a parking space in the area he needs to park</span>
+                <div class="line3 container-fluid">
+                    <h4 class="font-m"><b>Simon makes easy money just by rent space on parkr.</b></h4>
+                    <h2 class="font-m">Sarah is smart. Be like Sarah.</h2>
                 </div>
-                <div class="col-md-12 col-lg-2 image-container">
-                    <span class="font-js">Simon books his ideal parking space and pays a greate rate securely online</span>
-                </div>
-                <div class="col-md-12 col-lg-2 image-container">
-                    <span class="font-js">Simon is guided by parkr to his parking space</span>
-                </div>
-            </div>
-            <div class="line4 container-fluid">
-                <h4 class="font-m"><b>Simon has saved time and money and is stress-free.</b></h4>
-                <h2 class="font-m">Simon is smart. Be like Simon.</h2>
             </div>
         </div>
     </section>
-
+    <section id="landing" class="container-fluid">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 container-fluid text-center vertical-center">
+            <div class="col-sm-6">
+                <a href="#intro" class="btn back-to-top-btn">
+                    <p class="font-m">I am smart like Simon. Sign me up!</p>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                    <p class="font-m">I am smart like Sarah. Sign me up!</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container-fluid text-center vertical-center">
+            <span class="font-m">Copyright @ parkr</span>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="id_modal" tabindex="-1" role="dialog" aria-labelledby="id_modal_label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="id_modal_label">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.back-to-top-btn').click(function () {
+            $('html,body').animate({scrollTop: 0}, 'slow');
+            return false;
+        });
+    </script>
 {% endblock %}

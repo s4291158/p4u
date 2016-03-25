@@ -7,13 +7,13 @@ from .forms import *
 def index(request):
     context = {}
     if request.method == 'GET':
-        context['form'] = SubForm()
+        context['form'] = LandingForm()
     elif request.method == 'POST':
-        form = SubForm(request.POST)
+        form = LandingForm(request.POST)
         context['form'] = form
         if form.is_valid():
             form.save()
-            context['form'] = SubForm()
+            context['form'] = LandingForm()
             context['message'] = 'Thank you'
 
     return render(request, 'index.html', context)
