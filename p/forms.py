@@ -14,17 +14,23 @@ class LandingForm(forms.Form):
             })
         )
 
-        self.fields['city'] = forms.CharField(
+        self.fields['suburb'] = forms.CharField(
             widget=forms.TextInput(attrs={
                 'class': 'form-control no border-radius',
-                'placeholder': 'Brisbane'
+                'placeholder': 'Brisbane CBD'
             })
         )
 
-        self.fields['price'] = forms.FloatField(
+        self.fields['price'] = forms.CharField(
             widget=forms.TextInput(attrs={
                 'class': 'form-control no border-radius',
-                'placeholder': '$3.50'
+                'placeholder': '$15'
+            })
+        )
+
+        self.fields['role'] = forms.CharField(
+            widget=forms.TextInput(attrs={
+                'type': 'hidden',
             })
         )
 
@@ -36,12 +42,25 @@ class LandingForm(forms.Form):
             pass
         return self.cleaned_data['email']
 
-    # TODO check price float
+    def clean_price(self):
+        price = self.cleaned_data['price']
+        try:
+            price = float(price.replace('$', ''))
+        except ValueError:
+            raise forms.ValidationError('Please fix price format')
+        return price
+
+    def clean_role(self):
+        role = self.cleaned_data['role']
+        if role != 'parker' and role != 'parkee':
+            raise forms.ValidationError('Incorrect role input')
+        return role
 
     def save(self):
         sub = Landed(
             email=self.cleaned_data['email'],
-            city=self.cleaned_data['city'],
-            price=self.cleaned_data['price']
+            suburb=self.cleaned_data['suburb'],
+            price=self.cleaned_data['price'],
+            role=self.cleaned_data['role'],
         )
         sub.save()

@@ -18,7 +18,7 @@
         <div class="row">
             <div class="col-md-6 left">
                 <div class="container-fluid text-center vertical-center">
-                    <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                    <a href="#" class="btn parker" data-toggle="modal" data-target="#id_modal">
                         <span class="font-m">DO YOU NEED A PARK?</span>
                     </a>
                 </div>
@@ -26,7 +26,7 @@
 
             <div class="col-md-6 right">
                 <div class="container-fluid text-center vertical-center">
-                    <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                    <a href="#" class="btn parkee" data-toggle="modal" data-target="#id_modal">
                         <span class="font-m">DO HAVE SPACE?</span>
                     </a>
                 </div>
@@ -140,12 +140,12 @@
     <section id="landing" class="container-fluid">
         <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 container-fluid text-center vertical-center">
             <div class="col-sm-6">
-                <a href="#intro" class="btn back-to-top-btn">
+                <a href="#" class="btn parker" data-toggle="modal" data-target="#id_modal">
                     <p class="font-m">I am smart like Simon. Sign me up!</p>
                 </a>
             </div>
             <div class="col-sm-6">
-                <a href="#" class="btn" data-toggle="modal" data-target="#id_modal">
+                <a href="#" class="btn parkee" data-toggle="modal" data-target="#id_modal">
                     <p class="font-m">I am smart like Sarah. Sign me up!</p>
                 </a>
             </div>
@@ -163,22 +163,62 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                             aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="id_modal_label">Modal title</h4>
+                    <h4 class="modal-title" id="id_modal_label">Sign up</h4>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="container-fluid no-padding">
+                        <form id="landing-form" method="post" action="">
+                            {% csrf_token %}
+                            {% include 'form-field.html' with field=form.email label='before' class='col-sm-12' %}
+                            {% include 'form-field.html' with field=form.suburb label='before' class='col-sm-12' %}
+                            {% include 'form-field.html' with field=form.price label='before' class='col-sm-12' %}
+                            {% include 'form-field.html' with field=form.role %}
+                        </form>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <input type="submit" class="btn btn-primary" form="landing-form" value="Submit">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="id_modal_thankyou" tabindex="-1" role="dialog"
+         aria-labelledby="id_modal_thankyou_label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="id_modal_thankyou_label">Sign up complete</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid no-padding">
+                        <h4>THANK YOU for choose to join the community of</h4>
+                        <img src="{% static 'img/logo2.png' %}">
+                        <p>We are stll in development at the moment, but you will be the first to know when we launch!</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        $('.back-to-top-btn').click(function () {
-            $('html,body').animate({scrollTop: 0}, 'slow');
-            return false;
+        $(document).ready(function () {
+            {% if modal == 'landing' %}
+                $('#id_modal').modal('show');
+            {% elif modal == 'thank you' %}
+                $('#id_modal_thankyou').modal('show');
+            {% endif %}
+        });
+
+        $('.parkee').click(function () {
+            $('#id_role').val('parkee');
+            $('label[for="id_price"]').text('Desired rent price / day');
+        });
+
+        $('.parker').click(function () {
+            $('#id_role').val('parker');
+            $('label[for="id_price"]').text('Desired parking price / day');
         });
     </script>
 {% endblock %}

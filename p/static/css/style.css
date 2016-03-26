@@ -107,6 +107,9 @@ section#how {
       font-size: 24px; }
 section#landing {
   height: 400px; }
+  @media (max-width: 1199px) {
+    section#landing {
+      display: none; } }
   @media (max-width: 767px) {
     section#landing {
       height: 500px; } }
@@ -137,9 +140,17 @@ footer {
   height: 60px;
   background: #09E0FF; }
 
+#id_modal_thankyou .modal-content {
+  background: #09E0FF; }
+  #id_modal_thankyou .modal-content h4 {
+    color: #FFF; }
+  #id_modal_thankyou .modal-content img {
+    max-width: 100%;
+    max-height: 100; }
+
 .no-padding {
-  margin-right: 0;
-  margin-left: 0; }
+  padding-right: 0;
+  padding-left: 0; }
   .no-padding > [class*='col-'] {
     padding-right: 0;
     padding-left: 0; }

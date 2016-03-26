@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import JsonResponse, Http404
 
 from .models import *
 from .forms import *
@@ -8,14 +9,15 @@ def index(request):
     context = {}
     if request.method == 'GET':
         context['form'] = LandingForm()
-    elif request.method == 'POST':
+    if request.method == 'POST':
         form = LandingForm(request.POST)
         context['form'] = form
         if form.is_valid():
             form.save()
             context['form'] = LandingForm()
-            context['message'] = 'Thank you'
-
+            context['modal'] = 'thank you'
+        else:
+            context['modal'] = 'landing'
     return render(request, 'index.html', context)
 
 

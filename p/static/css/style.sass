@@ -138,6 +138,8 @@ section
 
   &#landing
     height: 400px
+    @media #{$md}
+      display: none
     @media #{$xs}
       height: 500px
 
@@ -175,9 +177,21 @@ footer
   height: 60px
   background: #09E0FF
 
+
+#id_modal_thankyou
+  .modal-content
+    background: #09E0FF
+
+    h4
+      color: #FFF
+
+    img
+      max-width: 100%
+      max-height: 100%
+
 .no-padding
-  margin-right: 0
-  margin-left: 0
+  padding-right: 0
+  padding-left: 0
 
   > [class*='col-']
     padding-right: 0
