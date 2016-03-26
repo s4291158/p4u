@@ -27,7 +27,7 @@
             <div class="col-md-6 right">
                 <div class="container-fluid text-center vertical-center">
                     <a href="#" class="btn parkee" data-toggle="modal" data-target="#id_modal">
-                        <span class="font-m">DO HAVE SPACE?</span>
+                        <span class="font-m">DO YOU HAVE SPACE?</span>
                     </a>
                 </div>
             </div>
@@ -84,7 +84,7 @@
                         <span class="font-js">Simon searches for a parking space in the area he needs to park</span>
                     </div>
                     <div class="col-md-12 col-lg-2">
-                        <span class="font-js">Simon books his ideal parking space and pays a greate rate securely online</span>
+                        <span class="font-js">Simon books his ideal parking space and pays a great rate securely online</span>
                     </div>
                     <div class="col-md-12 col-lg-2">
                         <span class="font-js">Simon is guided by parkr to his parking space</span>
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="line3 container-fluid">
-                    <h4 class="font-m"><b>Simon makes easy money just by rent space on parkr.</b></h4>
+                    <h4 class="font-m"><b>Sarah makes easy money just by rent space on parkr.</b></h4>
                     <h2 class="font-m">Sarah is smart. Be like Sarah.</h2>
                 </div>
             </div>
@@ -169,6 +169,7 @@
                     <div class="container-fluid no-padding">
                         <form id="landing-form" method="post" action="">
                             {% csrf_token %}
+                            {% include 'form-field.html' with field=form.name label='before' class='col-sm-12' %}
                             {% include 'form-field.html' with field=form.email label='before' class='col-sm-12' %}
                             {% include 'form-field.html' with field=form.suburb label='before' class='col-sm-12' %}
                             {% include 'form-field.html' with field=form.price label='before' class='col-sm-12' %}
@@ -193,10 +194,37 @@
                     <h4 class="modal-title" id="id_modal_thankyou_label">Sign up complete</h4>
                 </div>
                 <div class="modal-body">
-                    <div class="container-fluid no-padding">
-                        <h4>THANK YOU for choose to join the community of</h4>
-                        <img src="{% static 'img/logo2.png' %}">
-                        <p>We are stll in development at the moment, but you will be the first to know when we launch!</p>
+                    <div class="container-fluid text-center no-padding">
+                        <div class="line1 container-fluid no-padding">
+                            <h3>THANK YOU for choosing to join the</h3>
+                            <div class="container-fluid">
+                                <img src="{% static 'img/logo2.png' %}">
+                            </div>
+                            <h3>community</h3>
+                        </div>
+                        <div class="line2 container-fluid no-padding">
+                            <p>We are still working on building the best platform possible for our users. In the
+                                meantime, please join our social channels to be the first to know when we launch!</p>
+                        </div>
+                        <div class="line3 container-fluid no-padding">
+                            <ul>
+                                <li class="col-sm-4">
+                                    <a href="https://www.facebook.com/parkrparking">
+                                        <img src="{% static 'img/Facebook.png' %}">/parkrparking
+                                    </a>
+                                </li>
+                                <li class="col-sm-4">
+                                    <a href="https://twitter.com/parkrparking">
+                                        <img src="{% static 'img/Twitter.png' %}">/parkrparking
+                                    </a>
+                                </li>
+                                <li class="col-sm-4">
+                                    <a href="https://www.instagram.com/parkrparking/">
+                                        <img src="{% static 'img/Instagram.png' %}">/parkrparking
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

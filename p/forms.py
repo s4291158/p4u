@@ -7,14 +7,23 @@ class LandingForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(LandingForm, self).__init__(*args, **kwargs)
 
+        self.fields['name'] = forms.CharField(
+            max_length=40,
+            widget=forms.TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Bruce Wayne'
+            })
+        )
+
         self.fields['email'] = forms.EmailField(
             widget=forms.EmailInput(attrs={
                 'class': 'form-control',
-                'placeholder': '123@xyz.com',
+                'placeholder': '123@xyz.com'
             })
         )
 
         self.fields['suburb'] = forms.CharField(
+            max_length=40,
             widget=forms.TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Brisbane CBD'
@@ -29,6 +38,7 @@ class LandingForm(forms.Form):
         )
 
         self.fields['role'] = forms.CharField(
+            max_length=10,
             widget=forms.TextInput(attrs={
                 'type': 'hidden',
             })
@@ -58,6 +68,7 @@ class LandingForm(forms.Form):
 
     def save(self):
         sub = Landed(
+            name=self.cleaned_data['name'],
             email=self.cleaned_data['email'],
             suburb=self.cleaned_data['suburb'],
             price=self.cleaned_data['price'],
