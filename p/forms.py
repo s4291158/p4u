@@ -9,21 +9,21 @@ class LandingForm(forms.Form):
 
         self.fields['email'] = forms.EmailField(
             widget=forms.EmailInput(attrs={
-                'class': 'form-control no-border-radius',
+                'class': 'form-control',
                 'placeholder': '123@xyz.com',
             })
         )
 
         self.fields['suburb'] = forms.CharField(
             widget=forms.TextInput(attrs={
-                'class': 'form-control no border-radius',
+                'class': 'form-control',
                 'placeholder': 'Brisbane CBD'
             })
         )
 
         self.fields['price'] = forms.CharField(
             widget=forms.TextInput(attrs={
-                'class': 'form-control no border-radius',
+                'class': 'form-control',
                 'placeholder': '$15'
             })
         )
