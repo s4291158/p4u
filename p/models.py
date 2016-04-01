@@ -13,7 +13,7 @@ ROLE_CHOICES = [
 
 class Landed(models.Model):
     name = models.CharField(max_length=40)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     suburb = models.CharField(max_length=40)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
     price = models.FloatField()

@@ -47,7 +47,7 @@ class LandingForm(forms.Form):
     def clean_email(self):
         try:
             Landed.objects.get(email=self.cleaned_data['email'])
-            raise forms.ValidationError('Email has already been signed up')
+            raise forms.ValidationError('Email has already been signed up for the same role')
         except Landed.DoesNotExist:
             pass
         return self.cleaned_data['email']
