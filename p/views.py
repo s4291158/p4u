@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse, Http404
+from geoposition import Geoposition
+from geoposition.fields import GeopositionField
 
 from .models import *
 from .forms import *
@@ -23,7 +25,10 @@ def index(request):
 
 def mapdisplay(request):
     context = {}
-    context['center'] = Area.objects.get(name='UQ').address.position
-    context['carparks'] = Carpark.objects.filter(verified=True)
+    try:
+        context['center'] = Area.objects.get(name='UQ').address.position
+    except Area.DoesNotExist:
+        context['center'] = Geoposition(-27.4702785, 153.0055264)
 
+    context['carparks'] = Carpark.objects.filter(verified=True)
     return render(request, 'map.html', context)

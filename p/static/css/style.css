@@ -1,3 +1,8 @@
+body {
+  padding-top: 80px; }
+  body.index-page {
+    padding-top: 0; }
+
 .navbar {
   margin-bottom: 0; }
   .navbar .navbar-header {
@@ -130,11 +135,9 @@ section#landing {
       outline: none !important; }
     section#landing .container-fluid [class*='col-'] a p {
       font-size: 20px; }
-section.map {
-  padding-top: 80px; }
-  section.map #map-container {
-    height: 100%;
-    width: 100%; }
+section.map #map-container {
+  height: 100%;
+  width: 100%; }
 
 footer {
   height: 60px;
