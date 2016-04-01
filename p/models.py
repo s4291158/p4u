@@ -20,7 +20,7 @@ class Landed(models.Model):
     when = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return self.role + " - " + self.email
+        return self.email
 
 
 class BaseUser(AbstractUser):
