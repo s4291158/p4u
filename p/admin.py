@@ -4,7 +4,7 @@ from django.apps import apps
 app = apps.get_app_config('p')
 
 class LandedAdmin(admin.ModelAdmin):
-    list_display = ('email', 'role', 'when')
+    list_display = ('name', 'role', 'when')
     list_filter = list_display
 
 for model_name, model in app.models.items():
