@@ -1,6 +1,7 @@
 from django.db import models
 from geoposition.fields import GeopositionField
 from django.contrib.auth.models import AbstractUser
+from django.utils import timezone
 
 ROLE_CHOICES = [
     ('user', 'user'),
@@ -16,6 +17,7 @@ class Landed(models.Model):
     suburb = models.CharField(max_length=40)
     role = models.CharField(max_length=10, choices=ROLE_CHOICES)
     price = models.FloatField()
+    when = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.role + " - " + self.email
